@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #body{
+            background-image: url('instagram.jpg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #button{
+            background-color:skyblue;
+            color:green;
+            padding: 1%;
+            margin-left: 14%;
+            font-size: 130%;
+            border-radius: 50%            
+        }
+        h1{
+            color: deeppink;
+            text-shadow: 1px 1px 1px;
+            font-style: oblique;
+        }
+        #mail{
+            color:darkslategrey;
+            text-align: center;
+            font-size: 130%;
+            -ms-text-size-adjust: 300%;
+            background-color:azure;
+            border-radius: 20%;
+            margin: 1%
+        }
+        #div{
+            text-align: center;
+            font-size: 25px;
+            color:darkblue;
+            text-transform:capitalize;
+            border-radius: 20%
+            
+        }
+        #f{
+            width: 8%;
+            border-radius: 20%;
+        }
+        #d{
+            width: 10%;
+            margin-left:10%; 
+            border-radius: 20%;
+        }
+        #p{
+            color:black;
+            font-size: 30px;
+            text-decoration:transparent;
+        }
+        #b{
+            border: 1px solid pink;
+            border-bottom-width: 1em;
+            border-top-width:1em;
+            border-right-width: 1em;
+            border-left-width:1em;
+            padding-left: -50%;
+            background-color: aquamarine;
+            
+        }
+    </style>
+</head>
+<body id="body">
+    <h1> <center>Instagram Login Page </center></h1>
+    <div id="b">
+    <input type="button" id="button" name="home" value="Home" onclick="window.open('https://help.instagram.com/513673912024417')">
+    <input type="button" id="button"name="About" value="About" onclick="window.open('https://about.instagram.com/about-us')">
+    <input type="button" id="button" name="blog" value="Blog" onclick="window.open('https://about.instagram.com/en_US/blog')">
+    <input type="button" id="button" name="content" value="Contact" onclick="window.open('https://help.instagram.com/contact/505535973176353')"> </div>  <br> <br> <br>
+    <div id="div">
+        Email :<input type="text" id="mail" placeholder="Enter E-mail"> <br> <br>
+        Password :<input type="password" id="mail" placeholder="Enter Password"> <br> <br>
+        <input type="submit" id="mail" value="login" onclick="window.open('https://www.instagram.com/accounts/login/')">
+        <input type="submit" id="mail" value="Register" onclick="window.open('https://www.instagram.com/accounts/emailsignup/')"> <br> <br>
+        <a href="https://www.instagram.com/accounts/password/reset/" id="p">Fogret Password...</a> <br> <br> <br>
+        <img src="facebook.jpg" onclick="window.open('https://www.facebook.com/signup')" id="f"> 
+        <img src="twiter.jpg" onclick="window.open('https://twitter.com › login')" id="d">
+    </div>
+</body>
+</html>
