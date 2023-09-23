@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare</title>
+    <link rel="icon" href="images/MedicareLogo.jpeg" sizes="1000">
+    <style>
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: url('images/delivery.mp4') no-repeat center center fixed;
+        background-size: cover;
+    }
+
+    .whole {
+        /* border-radius: 20px; */
+        padding: 25px;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        justify-content: center;
+        /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
+        /* transition: background-color 0.3s, box-shadow 0.3s; */
+    }
+
+    .whole h2 {
+        font-size: 20px;
+        font-family: Georgia;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .input-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .input-label {
+        font-weight: bold;
+        font-size: 20px;
+        width: 180px;
+        margin-right: 10px;
+        box-shadow: 0px 0px 5px(0, 0, 0, 0.5); /* Add box shadow to labels */
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.7); /* Add a background color to labels */
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    .input-field:hover{
+        background-color: lavender;
+        color: #000000;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+
+    .whole-button {
+        background-color: aqua(124, 122, 120);
+        color: black;
+        border-radius: 7px;
+        width: 30%;
+        font-size: 24px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .whole-button:hover {
+        background-color:aqua;
+        color: white;
+    }
+
+    #scr {
+        text-align: center;
+    }
+
+    /* Centered success message styles */
+    .success-container {
+        display: none;
+        background-color: rgba(201, 231, 247, 0.7);
+        border-radius: 20px;
+        padding: 25px;
+        max-width: 900px;
+        text-align: center;
+    }
+
+    .success-container h2 {
+        font-size: 24px;
+    }
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    h2 {
+        text-decoration: underline;
+        font-weight: bolder;
+    }
+</style>
+
+    
+</head>
+<body>
+    <form id="deliveryForm" onsubmit="submitForm(event)">
+        <div class="whole">
+            <h2>Delivery Address</h2><br><br><br>
+            <div class="input-container">
+                <label class="input-label" for="firstname">Customer Name</label>
+                <input type="text" id="firstname" placeholder="Enter Your Name" class="input-field" required>
+            </div><div class="input-container">
+                <label class="input-label" for="num">Contact Number</label>
+                <input type="text" id="num" placeholder="Enter Your Mobile Number" class="input-field" required>
+            </div>
+            <div class="input-container">
+                <label class="input-label" for="mail">E-mail</label>
+                <input type="email" id="mail" placeholder="Enter Your Email" class="input-field" required>
+            </div>
+            <div class="input-container">
+                <label class="input-label" for="firstname">Work</label>
+                <input type="text" id="Work" placeholder="Home/Work" class="input-field">
+            </div>
+            <div class="input-container">
+                <label class="input-label" for="city">City</label>
+                <input type="text" id="city" placeholder="Enter Your City" class="input-field" required>
+            </div>
+            <div class="input-container">
+                <label class="input-label" for="state"> State</label>
+                <input type="text" id="state" placeholder="Enter Your State" class="input-field" required>
+            </div>
+            <div class="input-container">
+                <label class="input-label" for="pincode">Pin Code</label>
+                <input type="text" id="pincode" placeholder="Enter Your Pin Code" class="input-field" required>
+            </div>
+
+            <!-- ... (rest of the form fields) ... -->
+            <button type="submit" class="whole-button" id="submitBtn">Submit</button>
+        </div>
+    </form>
+    <!-- ... (rest of the HTML) ... -->
+    <div class="success-container" id="successContainer">
+        <h2>Your Order is successfully placed</h2>
+        <p>Name: <span id="userName"></span></p>
+        <p>Contact Number: <span id="userContact"></span></p>
+        <p>Email: <span id="userEmail"></span></p>
+    </div>
+    <div class="video-container">
+            <video autoplay loop muted>
+                <source src="images/delivery.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <script>
+            // JavaScript code to handle form submission
+            document.getElementById("deliveryForm").addEventListener("submit", function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+        
+                // Redirect to MedicineFB.html
+                window.location.href = "MedicineFB.html";
+            });
+        </script>     
+</body>
+</html>

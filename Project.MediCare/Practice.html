@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Form</title>
+    <link rel="stylesheet" href="Pro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        /* Your existing CSS code here */
+        body {
+            font-family: Arial, sans-serif;
+            position: relative; /* Set body to relative positioning */
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup img {
+            max-width: 100px;
+            max-height: 100px;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+        .popup button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .popup button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Rest of your CSS here */
+    </style>
+</head>
+<body>
+    <!-- Your form and other HTML content here -->
+
+    <div class="box">
+        <div class="form">
+            <h3 align="center" style="color: #fff;">Fill your Plans!</h3>
+            <form action="#">
+                <!-- Your form fields here -->
+                <div class="content"> 
+                    <input type="submit" onclick="showalert1()" value="Explore!" id="text-btn" />
+                </div>
+            </form>
+        </div><!-- form -->
+    </div><!-- box -->
+    
+    <!-- The Popup -->
+    <button type="button" class="btn" onclick="openPopup()">Explore</button>
+    <div class="popup" id="popup">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.nR56VEAkIf1nPlP7xAlohgAAAA&pid=Api&P=0&h=180">
+        <h2>Thank You!</h2>
+        <p>Your exploration details have been successfully submitted. Thanks!</p>
+        <button type="button" onclick="closePopup()">OK</button>
+    </div>
+
+    <!-- Previous Program's HTML and JavaScript -->
+    <div class="container">
+        <button type="submit" class="btn" onclick="openPopup()">Login</button>
+        <div class="popup" id="popup">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.nR56VEAkIf1nPlP7xAlohgAAAA&pid=Api&P=0&h=180">
+            <h2>Thank You!</h2>
+            <p>Your details have been successfully submitted. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.style.display = "block";
+        }
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
+
+        function showalert1() {
+            // Your form validation code
+            // If validation passes, you can call openPopup() here
+            openPopup();
+        }
+    </script>
+</body>
+</html>

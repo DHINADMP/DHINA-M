@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Medicare</title>
+  <link rel="icon" href="assets/images/medicare.png" sizes="1000">
+  <link rel="icon" href="/medimoor-hospital-website-design-using-html-css-and-js-master/Project.MediCare/MedicareLogo.jpeg" sizes="1000">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+:root {
+  --dur: all 550ms ease-in-out; 
+  --dur-a: all 650ms ease-in-out;
+  --dur-b: all 750ms ease-in-out;
+}
+body {
+  padding:0;
+  margin:0;
+  height:100vh;
+  display:grid;
+  align-items:center;
+  font-family:'Ubuntu';
+background: #0180e8; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  #0180e8 0%, #d4d2f7 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  #0180e8 0%,#d4d2f7 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  #0180e8 0%,#0180e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0180e8', endColorstr='#0180e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+margin-top:0%;
+
+}
+.container {
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-gap:20px;
+  padding:20px;
+  box-sizing:border-box;
+}
+.item {
+  background:#0234FF;
+  height:400px;
+  position:relative;
+  border-radius:15px;
+  padding:30px;
+  box-sizing:border-box;
+  color:#fff;
+}
+.card {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  z-index:10;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  border-radius:15px;
+  -webkit-transition: var(--dur);
+  -moz-transition: var(--dur);
+  -ms-transition: var(--dur);
+  -o-transition: var(--dur);
+  transition: var(--dur);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.card img {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  z-index:10;
+  height:100%;
+  width:auto;
+  max-width:9999px;
+  overflow:hidden;
+  border-radius:15px;
+  -webkit-transition: var(--dur);
+  -moz-transition: var(--dur);
+  -ms-transition: var(--dur);
+  -o-transition: var(--dur);
+  transition: var(--dur);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.item:hover .card  img{
+  clip-path: circle(0.0% at 50% 50%);
+}
+.circle {
+  background:#1101E8;
+  max-width:100%;
+  height:100%;
+  position:absolute;
+  z-index:2;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+  -webkit-transition: var(--dur-a);
+  -moz-transition: var(--dur-a);
+  -ms-transition: var(--dur-a);
+  -o-transition: var(--dur-a);
+  transition: var(--dur-a);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.circle2 {
+  background:#8E01E8;
+  -webkit-transition: var(--dur-b);
+  -moz-transition: var(--dur-b);
+  -ms-transition: var(--dur-b);
+  -o-transition: var(--dur-b);
+  transition: var(--dur-b);
+  clip-path: circle(100.0% at 50% 50%);
+}
+.item:hover .card  img {
+  clip-path: circle(0.0% at 50% 50%);
+}
+.item:hover .card  .circle {
+  clip-path: circle(0.0% at 75% 60%);
+}
+.item:hover .card  .circle2 {
+  clip-path: circle(0.0% at 35% 20%);
+}
+img {
+  max-width:100%;
+  position:absolute;
+  z-index:3;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+.content {
+  position:relative;
+  z-index:0;
+  display:flex;
+  align-items:center;
+  height:100%;
+}
+.border{
+  padding: 20px 20px; 
+      border: 2px solid rgb(23, 161, 253);
+      height: 9vh;
+      width: 100%;
+      background-color: rgb(23, 161, 253);
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      
+  }
+.border input[type="button"] {
+      border-style: none; /* Remove border */
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: blue;
+      color: aliceblue;
+      margin: 0 10px; /* Add some space between buttons */
+      border-radius: 15px; /* Add border radius for curve shape */
+
+  }
+  .about{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+  }
+  #home{
+    text-decoration: none;
+    text-align: center;
+            background-color: rgba(95, 222, 253, 0.596);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  </style>
+
+</head>
+<body>
+  
+  <div class="border">
+    <a href = "main.html" id= "home">HOME</a>
+</div>
+<div class="about">
+  About 
+</div>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="item">
+    <div class="card">
+      <div class="circle circle2"></div>
+      <img src="assets/images/about_1.gif" >
+      <div class="circle circle1"></div>
+    </div>
+    <div class="content">
+      <p>Doctor consulting is a crucial aspect of the Medicare system, ensuring that beneficiaries have access to primary care and specialized medical expertise. Patients can schedule appointments with qualified medical practitioners, ranging from general practitioners to specialists in various fields. These consultations encompass routine check-ups, diagnostic assessments, and treatment recommendations. With a focus on preventive care and early intervention, doctor consultations help in managing chronic conditions, addressing emerging health concerns, and maintaining overall well-being.</p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="card">
+      <div class="circle circle2"></div>
+      <div class="circle circle1"></div>
+      <img src="assets/images/about_2.gif" />
+    </div>
+    <div class="content">
+      <p>The Medicare system also facilitates the seamless ordering and distribution of prescribed medicines. Doctors' prescriptions are electronically transmitted to these pharmacies, minimizing delays and ensuring timely access to essential treatments. This streamlined process simplifies medication management and adherence for patients, enhancing their quality of life and reducing the risk of complications arising from untreated conditions.
+
+      </p>
+    </div>
+  </div>
+  <div class="item">
+    <div class="card">
+      <div class="circle circle2"></div>
+      <div class="circle circle1"></div>
+      <img src="assets/images/about_3.gif" />
+    </div>
+    <div class="content">
+      <p>Blood banks serve as repositories of donated blood, which can be readily accessed and transfused to patients in need, ranging from surgery patients to trauma victims. The integration of blood bank services within the Medicare system ensures that lifesaving blood products are accessible and well-managed, contributing to improved patient outcomes and reduced mortality rates.</p>
+    </div>
+  </div>
+</div>
+
+
+<!--
+<img src="https://i.ibb.co/tCKLc3d/audience-band-club-2747446.jpg" />
+<img src="https://i.ibb.co/3hnXN31/4k-wallpaper-audience-band-2728557.jpg" />
+<img src="https://i.ibb.co/vqsdkRt/cheerful-concert-crowd-849.jpg" />
+-->
+<!-- partial -->
+  
+</body>
+</html>

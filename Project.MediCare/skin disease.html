@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MediCare</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 23px ;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px dotted #ccc;
+            padding: 10px 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        th {
+            /* background-color: lightblue; */
+            padding: 10px;
+        }
+
+        td.quantity-cell {
+            text-align: center;
+        }
+
+        #d, #p ,#quantity {
+            text-transform: initial;
+            text-align: justify; 
+            /* background-color: aqua;Align the content to justify */
+        }
+
+        /* Set the maximum width for the images */
+        img {
+            max-width: 100px; /* Adjust the value as needed */
+            height: auto;
+        }
+        /* Style for the input field */
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect for the input field */
+input[type="number"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+#video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place it behind other content */
+        }
+    </style>
+      <link rel="icon" href="images/MedicareLogo.jpeg" sizes="1000"> </link>
+</head>
+<body>
+    <h1>Welcome to MediCare</h1>
+    <video id="video-background" autoplay loop muted>
+            <source src="images/MedicinesVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>MRP Rate</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="images/trretinoin.webp" alt="Product Image"></td>
+            <td id="d">Tretinoin USP-0.025 used to treat fine wrinkles, dark spots, or rough skin on the face caused by the damaging rays of the sun. It works by lightening the skin, replacing older skin with newer skin, and slowing down the way the body removes skin cells that may have been harmed by the sun.</td>
+            <td>RS:165</td>
+            <td>Rs:185</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton1">
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="images/clotri.jpg" alt="Product Image"></td>
+            <td id="p">Clotrimazole is a medicated antifungal skin cream, lotion, ointment or solution. It treats certain kinds of skin fungal or yeast infections. Follow the instructions on the label and wash your hands before and after using this product on your skin.
+            <td>RS:145</td>
+            <td>Rs:155</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton2">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>3</td>
+            <td><img src="images/opze.jpg" alt="Product Image"></td>
+            <td id="p">
+                Ruxolitinib topical is used to treat mild to moderate atopic dermatitis (eczema) in non-immunocompromised patients whose condition is not well controlled with other topical treatments or when these treatments are not recommended.
+            <td>Rs:14,821.82</td>
+            <td>Rs:14,900</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton3">
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="images/hydro.jpg" alt="Product Image"></td>
+            <td id="p">This medication is used to treat a variety of skin conditions (such as insect bites, poison oak/ivy, eczema, dermatitis, allergies, rash, itching of the outer female genitals, anal itching). Hydrocortisone reduces the swelling, itching, and redness that can occur in these types of conditions. This medication is a mild corticosteroid
+            <td>RS:214</td>
+            <td>Rs:240</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton4">
+            </td>
+        </tr>
+    </table>
+    <script>
+            // JavaScript code to handle button clicks and redirect
+            document.getElementById("buyButton1").addEventListener("click", function() {
+                // Redirect to the delivery page
+                window.location.href = "Delivery page.html";
+            });
+    
+            document.getElementById("buyButton2").addEventListener("click", function() {
+                // Redirect to the delivery page
+                window.location.href = "Delivery page.html";
+            });
+    
+            document.getElementById("buyButton3").addEventListener("click", function() {
+                // Redirect to the delivery page
+                window.location.href = "Delivery page.html";
+            });
+            document.getElementById("buyButton4").addEventListener("click", function() {
+                // Redirect to the delivery page
+                window.location.href = "Delivery page.html";
+            });
+        </script>
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MediCare</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 23px ;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px dotted #ccc;
+            padding: 10px 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        th {
+            /* background-color: lightblue; */
+            padding: 10px;
+        }
+
+        td.quantity-cell {
+            text-align: center;
+        }
+
+        #d, #p ,#quantity {
+            text-transform: initial;
+            text-align: justify; 
+            /* background-color: aqua;Align the content to justify */
+        }
+
+        /* Set the maximum width for the images */
+        img {
+            max-width: 100px; /* Adjust the value as needed */
+            height: auto;
+        }
+        /* Style for the input field */
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect for the input field */
+input[type="number"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+#video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place it behind other content */
+        }
+    </style>
+      <link rel="icon" href="images/MedicareLogo.jpeg" sizes="1000"> </link>
+</head>
+<body>
+    <h1>Welcome to MediCare</h1>
+    <video id="video-background" autoplay loop muted>
+            <source src="images/MedicinesVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>MRP Rate</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="images/head.jpg" alt="Product Image"></td>
+            <td id="d">Aspirin is used to reduce fever and relieve mild to moderate pain from conditions such as muscle aches, toothaches, common cold, and headaches. It may also be used to reduce pain and swelling in conditions such as arthritis. Aspirin is known as a salicylate and a nonsteroidal anti-inflammatory drug.</td>
+            <td>RS:5</td>
+            <td>RS:10</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton1">
+            </td>
+        </tr>
+    </table>
+    <script>
+            // JavaScript code to handle button clicks and redirect
+            document.getElementById("buyButton1").addEventListener("click", function() {
+                // Redirect to the delivery page
+                window.location.href = "Delivery page.html";
+            });
+        </script>
+</body>
+</html>
+        

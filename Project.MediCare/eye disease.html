@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MediCare</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 23px ;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px dotted #ccc;
+            padding: 10px 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        th {
+            /* background-color: lightblue; */
+            padding: 10px;
+        }
+
+        td.quantity-cell {
+            text-align: center;
+        }
+
+        #d, #p ,#quantity {
+            text-transform: initial;
+            text-align: justify; 
+            /* background-color: aqua;Align the content to justify */
+        }
+
+        /* Set the maximum width for the images */
+        img {
+            max-width: 100px; /* Adjust the value as needed */
+            height: auto;
+        }
+        /* Style for the input field */
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect for the input field */
+input[type="number"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+#video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1; /* Place it behind other content */
+        }
+    </style>
+      <link rel="icon" href="images/MedicareLogo.jpeg" sizes="1000"> </link>
+</head>
+<body>
+    <h1>Welcome to MediCare</h1>
+    <video id="video-background" autoplay loop muted>
+            <source src="images/MedicinesVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <table>
+        <tr>
+            <th>S.no</th>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Rate</th>
+            <th>MRP Rate</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td><img src="images/nepa.jpg" alt="Product Image"></td>
+            <td id="d">Nepa-SP is made up of the molecules found in Nepafenac Eye Drops, a type of non-steroidal anti-inflammatory medicine (NSAID) used to treat post-operative eye discomfort and inflammation. The use of nepafenac ophthalmic suspension helps to prevent the release of specific chemical messengers that cause discomfort and inflammation in the eye, such as redness and swelling.</td>
+            <td>RS:147</td>
+            <td>Rs:160</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton1">
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><img src="images/Flurbi-SP.jpg" alt="Product Image"></td>
+            <td id="p">Flurbi-SP is a combination of flurbiprofen and HPMC ophthalmic solution that is used to prevent or decrease abnormalities in the eye caused by cataract removal and eye surgery. This eye drop prevents the pupil, which is the inner part of the eye, from narrowing. It allows a doctor to examine the eye from the inside while doing surgery or changing the lens. The ingredient Hydroxypropyl Methylcellulose (HPMC) is used to alleviate dryness and irritation. It aids in the prevention of eye damage in certain eye conditions. </td>
+            <td>RS:145</td>
+            <td>Rs:155</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton2">
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><img src="images/opze.jpg" alt="Product Image"></td>
+            <td id="p">The two most successful drugs, Moxifloxacin and Ketorolac Eye Drops are combined in Specmox-KT Eye Drops, making them a highly effective eye therapy. Moxifloxacin eye drops are a 4th generation antibiotic, whilst Ketorolac eye drops are an anti-inflammatory medication. Ketorolac and Moxifloxacin Eye Drops are used to treat bacterial infections in the eyes. The drug works by preventing the production of chemical messengers that produce discomfort and inflammation in the afflicted eye.</td>
+            <td>Rs:14,821.82</td>
+            <td>Rs:14,900</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton3">
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><img src="images/Specmox-KT.jpg" alt="Product Image"></td>
+            <td id="p">The two most successful drugs, Moxifloxacin and Ketorolac Eye Drops are combined in Specmox-KT Eye Drops, making them a highly effective eye therapy. Moxifloxacin eye drops are a 4th generation antibiotic, whilst Ketorolac eye drops are an anti-inflammatory medication. Ketorolac and Moxifloxacin Eye Drops are used to treat bacterial infections in the eyes. The drug works by preventing the production of chemical messengers that produce discomfort and inflammation in the afflicted eye. </td>
+            <td>RS:214</td>
+            <td>Rs:240</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton4">
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><img src="images/ampicilin.jpg" alt="Product Image"></td>
+            <td id="p">It is a injection medicine.The combination of ampicillin and sulbactam injection is used to treat certain infections caused by bacteria, including infections of the skin, female reproductive organs, and abdomen (stomach area). Ampicillin is in a class of medications called penicillin-like antibiotics. It works by stopping the growth of bacteria. Sulbactam is in a class of medications called beta-lactamase inhibitors. It works by preventing bacteria from destroying ampicillin.</td>
+            <td>RS:125.00</td>
+            <td>Rs:150.00</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton5">
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><img src="images/cefolac.jpg" alt="Product Image"></td>
+            <td id="p">Cephalosporins are beta-lactam antimicrobials used to manage a wide range of infections from gram-positive and gram-negative bacteria. The five generations of cephalosporins are useful against skin infection, resistant bacteria, meningitis, and other infections.</td>
+            <td>RS:250.00</td>
+            <td>Rs:300.00</td>
+            <td class="quantity-cell">
+                <input type="number" name="quantity" id="quantity" value="1" min="1"> <br> <br>
+                <input type="submit" value="Buy" id="buyButton6">
+            </td>
+        </tr>
+    </table>
+    <script>
+        // JavaScript code to handle button clicks and redirect
+        document.getElementById("buyButton1").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+
+        document.getElementById("buyButton2").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+
+        document.getElementById("buyButton3").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+        document.getElementById("buyButton4").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+
+        document.getElementById("buyButton5").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+
+        document.getElementById("buyButton6").addEventListener("click", function() {
+            // Redirect to the delivery page
+            window.location.href = "Delivery page.html";
+        });
+    </script>
+</body>
+</html>

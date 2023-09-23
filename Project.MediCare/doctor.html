@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Consulting Bot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/doctor 2.mp4') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .chat-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            max-height: 600px;
+            overflow-y: scroll;
+        }
+
+        .chat-box {
+            padding: 20px;
+        }
+
+        .bot-message {
+            background-color: #f0f0f0;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .user-message {
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+
+        .input-container {
+            display: flex;
+            padding: 10px;
+        }
+
+        #user-input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        #send-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind other content */
+        }
+
+        video {
+            object-fit: cover; /* Cover the entire viewport */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+        <div class="video-container">
+                <video autoplay loop muted>
+                    <source src="images/doctor 2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="bot-message">Hello! I'm your Doctor.. How can I assist you today?</div>
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+        const sendButton = document.getElementById('send-btn');
+
+        sendButton.addEventListener('click', sendMessage);
+
+        function sendMessage() {
+            const mess = userInput.value.trim();
+            var message=mess.toLowerCase();
+            if (message !== '') {
+                appendMessage('user', message);
+                respondToUser(message);
+                userInput.value = '';
+            }
+        }
+
+        function appendMessage(sender, message) {
+            const messageElement = document.createElement('div');
+            messageElement.className = sender + '-message';
+            messageElement.textContent = message;
+            chatBox.appendChild(messageElement);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function respondToUser(message) {
+            let botResponse = '';
+
+            if (message.includes('headache')) {
+                botResponse = 'Headaches can be caused by various factors such as stress, dehydration, or tension. Consider resting and drinking water.';
+            } else if (message.includes('fever')) {
+                botResponse = 'Fever might be a sign of infection. Make sure to monitor your temperature and consult a doctor if it persists.';
+            } else if (message.includes('sore throat')) {
+                botResponse = 'A sore throat could be due to a viral or bacterial infection. Gargling with warm salt water may help relieve discomfort.';
+            } 
+            else if (message.includes('stomach pain')) {
+                botResponse = 'For mild stomach pain, over-the-counter antacids like Tums or Pepto-Bismol may provide relief. However, if the pain is severe or persistent, it\'s best to consult a doctor.';
+            }
+            else if (message.includes('low back pain')){
+                botResponse=' I can provide you with some general information about medications that are commonly used to manage low back pain. Muscle relaxant medications like cyclobenzaprine (Flexeril) or methocarbamol (Robaxin) are sometimes prescribed to help alleviate muscle spasms and discomfort associated with low back pain.';
+            }
+            else if (message.includes('cold')) {
+                botResponse = 'For cold symptoms, you can consider over-the-counter medications such as decongestants (e.g., pseudoephedrine) to relieve nasal congestion, antihistamines (e.g., loratadine) for runny nose and sneezing, and pain relievers (e.g., acetaminophen) for fever and discomfort. Make sure to read the labels and follow the recommended dosages.';
+             }
+             else  if (message.includes('eye infection')) {
+                botResponse = 'For mild cases of eye infection, you can use over-the-counter artificial tears to relieve symptoms. However, if the infection is severe or persists, it\'s important to consult a doctor for proper diagnosis and prescription medication.';
+            } else if (message.includes('knee pain')){
+                botResponse='It\'s recommended to consult a healthcare professional before taking any medications.Glucosamine and Chondroitin: These supplements are sometimes used to support joint health and might provide relief for mild knee pain, especially if it\'s related to osteoarthritis. Keep in mind that their effectiveness can vary, and it\'s a good idea to discuss these with a healthcare professional.';
+            }
+            else if(message.includes('ear pain')) {
+                botResponse = 'For mild ear pain, you can try over-the-counter pain relievers like acetaminophen or ibuprofen. However, it\'s important to consult a doctor if the pain is severe or if you experience any discharge or hearing loss.';
+            } else if(message.includes('diabetes')){
+                botResponse='Type 1 Diabetes Medications:Insulin: People with type 1 diabetes typically require insulin therapy. Insulin can be delivered via injections or insulin pumps.Type 2 Diabetes Medications:Type 2 diabetes treatment often starts with lifestyle changes such as diet and exercise.Metformin: This is usually the first-line medication for type 2 diabetes. It helps improve insulin sensitivity and reduce the production of glucose by the liver.';
+            }
+            else if (message.includes('neck pain')) {
+                botResponse = 'For mild neck pain, you can try over-the-counter pain relievers like ibuprofen or acetaminophen. Applying a warm compress and gentle neck stretches may also provide relief. If the pain persists or worsens, it\'s recommended to consult a medical professional.';
+            }
+            else if (message.includes('diarrhea')) {
+                botResponse = 'Diarrhea can be caused by various factors including infections, food poisoning, or underlying health conditions. If it\'s mild, consider staying hydrated with electrolyte solutions and eating a bland diet. If it persists or is severe, it\'s important to consult a doctor. Over-the-counter medications like loperamide (Imodium) can help manage symptoms, but it\'s best to seek medical advice.';
+            }
+            else if(message.includes('malaria')){
+                botResponse='Mefloquine: Mefloquine is used as a prophylactic (preventive) treatment and in the treatment of malaria caused by Plasmodium falciparum. It is often used when other medications are not effective due to drug resistance.';
+            }
+            else if(message.includes('acidity')){
+                botResponse='For mild cases of acidity or heartburn, over-the-counter antacids can be used to provide temporary relief. Common antacid ingredients include:Calcium Carbonate: Found in products like Tums and Rolaids.Magnesium Hydroxide: Found in products like Milk of Magnesia.Aluminum Hydroxide: Found in some antacids.';
+            }
+            else if(message.includes('food poisoning')){
+                botResponse='Food poisoning is caused by consuming contaminated food or beverages, and it can lead to symptoms like nausea, vomiting, diarrhea, and stomach cramps.Hydration: The most important aspect of treatment is staying hydrated. Drinking clear fluids like water, clear broth, and oral rehydration solutions (ORS) can help replace lost fluids and electrolytes.';
+            }
+            else if (message.includes('vomiting')) {
+                botResponse = 'Vomiting can have many causes, such as food poisoning or motion sickness. Over-the-counter medications like Pepto-Bismol or Emetrol can help manage mild cases. However, if vomiting persists, consult a doctor.';
+            }
+            else {
+                botResponse = 'I\'m not sure how to respond to that. Please provide more information.';
+            }
+
+            appendMessage('bot', botResponse);
+        }
+    </script>
+</body>
+</html>

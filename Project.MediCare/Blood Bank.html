@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blood availability</title>
+        <style>
+        body {
+            display: flex;
+            justify-content: flex-end; /* Align body content to the right */
+            align-items: center;
+            height: 100vh;
+            margin: 0 350px 0 0; /* Adjusted margin to push content right */
+            background-size: cover;
+            background-color: blue;
+        }
+        .whole{
+            background-color: rgba(201, 231, 247, 0.7);
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align container content to the left */
+            text-align: justify; 
+            justify-content: flex-start;
+            margin-top: 100px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="whole">
+            <h2>Blood Bank Availability</h2>
+            <label for="m_blood_type">Select Blood Group:</label>
+            <select id="m_blood_type">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+            <br>
+            <br>
+            <button>Check Availability</button>
+            <p id="m_availability_message"></p>
+        </div>
+    </body>
+</html>

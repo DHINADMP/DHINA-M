@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+        <style>
+        body {
+            height: 100vh; /* Ensure full viewport height */
+            background:url('images/Connection.mp4') no-repeat center center fixed;
+            margin-bottom: 30px;
+            background-size: cover;
+        }
+        #div {
+            height: 10px;
+            text-align: left;
+            font-size: 1.5em;
+            text-transform: capitalize;
+            justify-content: left;
+            
+        }
+        #form {
+            background-color: rgb(250, 163, 207);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity:65%;
+            width: 400px;
+            height: 100px;
+            margin-left: 500px;
+            border-radius: 40px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 200px; /* Add some top margin to separate the form from the content above */
+        }
+        #medicine-list {
+            background-color: rgba(10, 98, 139, 0.767);
+            width: 300px;
+            border-radius: 10px;
+            margin-left: 40px;
+            margin-top: -130px;
+            opacity:80%;
+            float: left; /* Align the list to the left */
+        }
+        #medicine-label {
+            float: right; /* Align the label to the right */
+            font-weight: bold;
+            width: 50px;
+            margin-right: 20px; /* Add some margin to separate the label from the input */
+            line-height: 2; /* Center the label vertically with the input */
+        }
+        #ol{
+            text-decoration:none;
+            font-family:Algerian;
+        }
+        h4{
+            font-family: Times New Roman;
+            font-size: 50px;
+            
+        }
+        .prblm{
+            background-color: rgb(191, 195, 247);
+            width: 6cm;
+            height: 1cm;
+            border: 1px solid #2980b9;
+            background-image: url("2");
+            text-align: center;
+            border-radius: 20px;
+            opacity: 70%;
+            
+        }
+         #click:hover{
+        box-shadow: 0 0 10px green;
+    }
+    #name:hover{
+        background-color: black;
+        color:white;
+    }
+    #name{
+        padding: 2%;
+        font-size: 130%    
+    }
+    .video-container{
+        position: absolute;
+        top: 0;
+        left:0;
+        width:100%;
+        height: 100%;
+        z-index: -1;
+
+    }
+    video{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    .box{
+        color: black;
+    }
+    #click{
+        padding: 2%;
+        font-size: 100%;
+    }
+        
+        
+    </style>
+    <link rel="icon" href="images/MedicareLogo.jpeg" sizes="1000">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="images/Connection.mp4" type="video/mp4">
+            your browser does not support our content!!
+        </video>
+    </div>
+    <div id="div">
+        <center><h4>Online Available Medicine</h4></center>
+        <div id="medicine-list">
+            
+            <ul type="none"><ins id="ol">Available Medicine</ins><br><br>
+
+                <li class="prblm">Fever</li>
+                <li class="prblm">Skin Disease</li>
+                <li class="prblm">Stomach Ache</li>
+                <li class="prblm">Head Ache</li>
+                <li class="prblm">Asthma</li>
+                <li class="prblm">Blood Disorder</li>
+                <li class="prblm">Bacterial Infections</li>
+                <li class="prblm">Chicken Pox</li>
+                <li class="prblm">Fungal Infections</li>
+                <li class="prblm">Joint Pain</li>
+                <li class="prblm">Vitamin Deficiency</li>
+                <li class="prblm">Eye Disease</li>
+            </ul>
+        </div>
+        <form id="myForm">
+            <div id="form">
+                <label for="name" class="box">Disease Name</label>
+                <input type="text" id="name" name="name"><br><br>
+                <input type="button" value="Check"  id="click" onclick="openPage()">
+            </div>
+        </form>
+    </div>
+    <script>
+        function openPage() {
+            const name = document.getElementById("name").value.toLowerCase(); // Convert to lowercase
+            
+            if (name === "fever") {
+                window.open("Fever.html", '_blank');
+            } 
+            else if (name === "skin disease") {
+                window.open("skin disease.html", '_blank');
+            }
+            else if (name === "stomach ache") {
+                window.open("stomach.html", '_blank');
+            }
+            else if (name === "head ache") {
+                window.open("headche.html", '_blank');
+            }
+            else if (name === "asthma") {
+                window.open("asthma.html", '_blank');
+            } 
+            else if (name === "blood disorder") {
+                window.open("blooddisorders.html", '_blank');
+            }
+            else if (name === "bacterial infections") {
+                window.open("bacteriainfections.html", '_blank');
+            } 
+            else if (name === "chicken pox") {
+                window.open("chickenbox.html", '_blank');
+            } 
+            else if (name === "fungal infections") {
+                window.open("fungaiinfectons.html", '_blank');
+            } 
+            else if (name === "joint pain") {
+                window.open("jointpain.html", '_blank');
+            } 
+            else if (name === "vitamin deficiency") {
+                window.open("vitamin Deficiency.html", '_blank');
+            } 
+            else if (name === "eye disease") {
+                window.open("eye disease.html", '_blank');
+            } 
+            else {
+                alert("Please give the available Medicine");
+            }
+        }
+    </script>
+</body>
+</html>
